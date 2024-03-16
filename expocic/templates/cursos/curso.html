@@ -1,0 +1,27 @@
+{% extends 'dependencies.html' %}
+{% load static wagtailimages_tags wagtailcore_tags %}
+{% block content %}
+  <div class="container-fluid px-0 m-0 container_style">
+    <div class="slider text-center">
+      {% for slider in curso.sliders.all %}
+        {% image slider.image_slider width-1300 as image_slider %}
+        <div class="slider-item"
+             style="background-image: url('{{ image_slider.url }}'); background-repeat: no-repeat; background-size: cover; height: 100vh;">
+          <div
+            class="{% if slider.title_slider == 'Plano de Estudos' %}transformimage {% elif slider.title_slider == 'Perfil do Técnico' %}transformperfil {% elif slider.title_slider == "Saídas Profissionais" %}transformsaidas{% else %}transformintro{% endif %} slider-content m-auto">
+            <div class="text-uppercase course_title">
+              {% if slider.title_slider == 'Introdução' %}
+                <h2 class="text-center">
+                  {{ curso.titulo }}
+                </h2>
+              {% endif %}
+            </div>
+            <h3 {% if slider.title_slider == 'Plano de Estudos' %}class="d-none"{% endif %}>{{ slider.title_slider|safe }}</h3>
+            <div
+              {% if slider.title_slider == 'Plano de Estudos' %}class="d-flex{% else %} text-justify{% endif %}">{{ slider.paragraph_slider|richtext }}</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,61 @@
+.title {
+  text-align: center;
+}
+
+.container_style {
+  overflow: hidden;
+  position: absolute;
+  height: -webkit-fill-available;
+}
+
+.slider-content {
+  background: rgba(255, 255, 255, 0.7); /* Background color with opacity */
+  padding: 20px;
+  border-radius: 10px;
+  width: 70%;
+  transform: translate(0%, 50%);
+}
+
+
+.course_title {
+  margin-top: 15px;
+  font-size: 2rem; /* Adjust the font size */
+}
+
+h3 {
+  font-size: 1.5rem; /* Adjust the font size */
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem; /* Adjust the font size */
+}
+
+.richtext-image {
+  max-height: 87vh;
+}
+
+.transformimage {
+  transform: translate(0%, 30px);
+}
+
+.transformintro {
+  transform: translate(0%, 50%);
+}
+
+.transformperfil {
+  transform: translate(0%, 35%);
+}
+
+.transformsaidas {
+  transform: translate(0%, 35%);
+  padding: 30px;
+}
+
+i {
+  text-align: center;
+}
+
+ul {
+  text-align: left;
+}
