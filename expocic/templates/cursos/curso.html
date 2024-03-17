@@ -8,7 +8,7 @@
         <div class="slider-item"
              style="background-image: url('{{ image_slider.url }}'); background-repeat: no-repeat; background-size: cover; height: 100vh;">
           <div
-            class="{% if slider.title_slider == 'Plano de Estudos' %}transformimage {% elif slider.title_slider == 'Perfil do Técnico' %}transformperfil {% elif slider.title_slider == "Saídas Profissionais" %}transformsaidas{% else %}transformintro{% endif %} slider-content m-auto">
+            class="{% if slider.title_slider == 'Plano de Estudos' %}transformimage {% elif slider.title_slider == 'Perfil do Técnico' %}transformperfil {% elif slider.title_slider == "Saídas Profissionais" %}transformsaidas{% else %}transformintro{% endif %} slider-content m-auto" id="carousel-container">
             <div class="text-uppercase course_title">
               {% if slider.title_slider == 'Introdução' %}
                 <h2 class="text-center">
@@ -16,9 +16,10 @@
                 </h2>
               {% endif %}
             </div>
-            <h3 {% if slider.title_slider == 'Plano de Estudos' %}class="d-none"{% endif %}>{{ slider.title_slider|safe }}</h3>
+            <h3
+              {% if slider.title_slider == 'Plano de Estudos' %}class="d-none"{% endif %}>{{ slider.title_slider|safe }}</h3>
             <div
-              {% if slider.title_slider == 'Plano de Estudos' %}class="d-flex{% else %} text-justify{% endif %}">{{ slider.paragraph_slider|richtext }}</div>
+              {% if slider.title_slider == 'Plano de Estudos' %}class="d-flex justify-content-around{% else %} text-justify{% endif %}">{{ slider.paragraph_slider|richtext }}</div>
           </div>
         </div>
       {% endfor %}

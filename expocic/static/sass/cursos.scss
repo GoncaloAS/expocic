@@ -59,3 +59,15 @@ i {
 ul {
   text-align: left;
 }
+
+#djDebugToolbarHandle{
+  display: none;
+}
+
+.slider {
+  pointer-events: none;
+}
+
+body {
+  cursor: none;
+}
